@@ -1,5 +1,5 @@
 import streamlit as st
-from PIL import Image
+
 import time
 
 st.title('Streamlit入門')
@@ -14,9 +14,6 @@ for i in range(100):
     bar.progress(i+1)
     time.sleep(0.1)
 
-if st.checkbox('Show image'):    
-    img=Image.open('sample.jpg')   
-    st.image(img,caption='cat',use_column_width=True)
 
 option=st.selectbox('Favorite Num',
              list(range(1,11))            
